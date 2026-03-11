@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt | SV.P. FIDELITAS",
@@ -23,7 +24,7 @@ export default function KontaktPage() {
       />
 
       <section className="py-16 bg-white">
-        <div className="mx-auto w-[90vw] px-4">
+        <div className="mx-auto w-[90vw] md:px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div>
@@ -68,66 +69,13 @@ export default function KontaktPage() {
             </div>
 
             {/* Contact Form */}
-            <div>
-              <h2 className="text-[38px] font-bold text-black mb-8 font-heading">
-                Napíšte nám
-              </h2>
-              <form className="space-y-5">
-                <div>
-                  <label className="block text-[17px] font-bold text-black mb-2 font-heading">
-                    Meno a priezvisko
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full border border-gray-300 rounded-[3px] px-4 py-3 text-[17px] text-black outline-none focus:border-[#ed2024] transition-colors font-heading"
-                    placeholder="Vaše meno"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[17px] font-bold text-black mb-2 font-heading">
-                    E-mail
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full border border-gray-300 rounded-[3px] px-4 py-3 text-[17px] text-black outline-none focus:border-[#ed2024] transition-colors font-heading"
-                    placeholder="vas@email.sk"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[17px] font-bold text-black mb-2 font-heading">
-                    Telefón
-                  </label>
-                  <input
-                    type="tel"
-                    className="w-full border border-gray-300 rounded-[3px] px-4 py-3 text-[17px] text-black outline-none focus:border-[#ed2024] transition-colors font-heading"
-                    placeholder="+421 ..."
-                  />
-                </div>
-                <div>
-                  <label className="block text-[17px] font-bold text-black mb-2 font-heading">
-                    Správa
-                  </label>
-                  <textarea
-                    rows={5}
-                    className="w-full border border-gray-300 rounded-[3px] px-4 py-3 text-[17px] text-black outline-none focus:border-[#ed2024] transition-colors resize-none font-heading"
-                    placeholder="Opíšte, s čím vám môžeme pomôcť..."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] rounded-[3px] hover:scale-[1.04] transition-transform"
-                  style={{ fontFamily: "Roboto, sans-serif" }}
-                >
-                  Odoslať správu
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
 
           {/* Map */}
-          <div className="mt-16 rounded-[10px] overflow-hidden h-[400px]">
+          <div className="mt-16 overflow-hidden h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2651.107786196236!2d17.800045112521713!3d48.4230230711674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b3ed49b062ec7%3A0x28af8a4f49495f26!2zxaBvbHTDqXNvdmEgMTcsIDkyMCAwMSBIbG9ob3ZlYw!5e0!3m2!1ssk!2ssk!4v1741394460303!5m2!1ssk!2ssk"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2651.1!2d17.8!3d48.423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b5a673e6fdb01%3A0x9e33844abe8b8be0!2sSV.P.%20FIDELITAS!5e0!3m2!1ssk!2ssk"
               width="100%"
               height="100%"
               style={{ border: 0 }}

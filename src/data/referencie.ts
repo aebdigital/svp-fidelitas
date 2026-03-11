@@ -55,22 +55,11 @@ export const projects: ReferenceProject[] = [
     title: "Vnútorné zateplenie obvodového plášťa",
     description:
       "Zateplenie obvodového plášťa budov z vnútornej strany. Efektívne riešenie pre zlepšenie tepelnoizolačných vlastností existujúcich objektov.",
-    preview: `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_0115.JPG`,
+    preview: `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7612.JPG`,
     mainImage: `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7723.JPG`,
     images: [
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_0115.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_6235.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_6237.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_6238.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_6240.JPG`,
       `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7612.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7615.JPG`,
       `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7723.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7842.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_8002.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_8247.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_8680.JPG`,
-      `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_8927.JPG`,
     ],
   },
   {

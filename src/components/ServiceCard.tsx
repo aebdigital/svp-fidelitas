@@ -13,9 +13,9 @@ export default function ServiceCard({ href, icon: Icon, title, description }: Se
   return (
     <Link
       href={href}
-      className="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300"
+      className="group relative bg-white p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300"
     >
-      <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-red-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+      <div className="mb-5 inline-flex items-center justify-center w-14 h-14 bg-red-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
         <Icon className="h-7 w-7" />
       </div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>

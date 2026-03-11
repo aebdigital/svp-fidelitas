@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import Image from "next/image";
+import ClickableImage from "@/components/ClickableImage";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ const sections = [
   {
     title: "Servisné služby pre vozidlá",
     description: "Ponúkame: opravy motorov, diagnostika vozidiel, príprava na STK, oprava podvozkových častí – tlmiče, brzdy, plnenie a kompletný servis AC, výmena čelných skiel, čistenie – leštenie skiel reflektorov vozidiel, čistenie klimatizácie ( ionizácia ), montáž ťažných zariadení, zápis servisu do RSZV",
-    image: "/images/8FA0BF52.jpeg",
+    image: "/images/autoservis/1.jpg",
   },
   {
     title: "Predaj a výmena prevádzkových kvapalín pre vozidlá",
@@ -26,6 +26,8 @@ const sections = [
   },
 ];
 
+const allImages = sections.map((s) => ({ src: s.image, alt: s.title }));
+
 export default function AutoservisPage() {
   return (
     <>
@@ -35,7 +37,7 @@ export default function AutoservisPage() {
       />
 
       <section className="py-16 bg-white">
-        <div className="mx-auto w-[90vw] px-4">
+        <div className="mx-auto w-[90vw] md:px-4">
           <div className="space-y-20">
             {sections.map((section, idx) => (
               <div key={section.title} className={`flex flex-col ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-10 items-center`}>
@@ -48,20 +50,19 @@ export default function AutoservisPage() {
                   </p>
                   <Link
                     href="/kontakt"
-                    className="inline-block bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] rounded-[3px] hover:scale-[1.04] transition-transform"
+                    className="inline-block bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] hover:scale-[1.04] transition-transform"
                     style={{ fontFamily: "Roboto, sans-serif" }}
                   >
-                    Kontakt
+                    KONTAKT
                   </Link>
                 </div>
-                <div className="flex-1 relative h-[350px] md:h-[450px] w-full rounded-[10px] overflow-hidden">
-                  <Image
-                    src={section.image}
-                    alt={section.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <ClickableImage
+                  src={section.image}
+                  alt={section.title}
+                  className="flex-1 relative h-[350px] md:h-[450px] w-full overflow-hidden"
+                  allImages={allImages}
+                  index={idx}
+                />
               </div>
             ))}
           </div>

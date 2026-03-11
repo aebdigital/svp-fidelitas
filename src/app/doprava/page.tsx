@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import Image from "next/image";
+import ClickableImage from "@/components/ClickableImage";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -42,6 +42,8 @@ const sections = [
   },
 ];
 
+const allImages = sections.map((s) => ({ src: s.image, alt: s.title }));
+
 export default function DopravaPage() {
   return (
     <>
@@ -52,9 +54,9 @@ export default function DopravaPage() {
       />
 
       <section className="py-16 bg-white">
-        <div className="mx-auto w-[90vw] px-4">
-          <p className="text-[17px] text-[#6a6a6a] mb-12 font-heading font-normal">
-            Značky našich vozidiel a strojov: <strong className="text-black">TATRA, DAF, RENAULT, MAN, CASE, TEREX</strong>
+        <div className="mx-auto w-[90vw] md:px-4">
+          <p className="text-[17px] text-[#6a6a6a] mb-12 font-heading font-normal max-w-5xl leading-relaxed">
+            V oblasti nákladných automobilov využívame značky TATRA, DAF, RENAULT a MAN, ktoré sú zárukou spoľahlivej prevádzky aj v najnáročnejších podmienkach a terénoch. V segmente stavebných mechanizmov používame stroje celosvetovo uznávanej značky CASE a TEREX. Služby vykonávame špeciálnymi strojmi a technológiami s vysokou bezpečnosťou, efektívnosťou a spoľahlivosťou. Prácu realizujeme profesionálne a na vysokej úrovni, aby sme vyhoveli všetkým požiadavkám zákazníka.
           </p>
 
           <div className="space-y-20">
@@ -80,20 +82,19 @@ export default function DopravaPage() {
                   </ul>
                   <Link
                     href="/kontakt"
-                    className="inline-block bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] rounded-[3px] hover:scale-[1.04] transition-transform"
+                    className="inline-block bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] hover:scale-[1.04] transition-transform"
                     style={{ fontFamily: "Roboto, sans-serif" }}
                   >
-                    Kontakt
+                    KONTAKT
                   </Link>
                 </div>
-                <div className="flex-1 relative h-[350px] md:h-[450px] w-full rounded-[10px] overflow-hidden">
-                  <Image
-                    src={section.image}
-                    alt={section.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <ClickableImage
+                  src={section.image}
+                  alt={section.title}
+                  className="flex-1 relative h-[350px] md:h-[450px] w-full overflow-hidden"
+                  allImages={allImages}
+                  index={idx}
+                />
               </div>
             ))}
           </div>

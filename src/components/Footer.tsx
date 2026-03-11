@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -24,17 +26,21 @@ const contacts = [
 ];
 
 export default function Footer() {
+  const openCookieSettings = () => {
+    window.dispatchEvent(new Event("open-cookie-settings"));
+  };
+
   return (
     <footer className="bg-black text-white">
-      <div className="mx-auto w-[90vw] px-4 pt-[60px] pb-[30px]">
+      <div className="mx-auto w-[90vw] md:px-4 pt-[60px] pb-[30px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <Link href="/" className="relative block h-[81px] w-[253px] mb-4">
+            <Link href="/" className="relative block w-[240px] h-[80px] mb-4">
               <Image
-                src="/images/Adobe-Express-file-5-e1744103178172.png"
+                src="/logo-removebg-preview.png"
                 alt="SV.P. FIDELITAS"
                 fill
-                className="object-contain object-left rounded-[9px]"
+                className="object-fill"
               />
             </Link>
             <p className="text-[17px] text-white font-normal leading-relaxed font-heading">
@@ -68,6 +74,15 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  type="button"
+                  onClick={openCookieSettings}
+                  className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-heading text-left"
+                >
+                  Nastavenia cookies
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -99,7 +114,7 @@ export default function Footer() {
           <p>2025© SV.P.FIDELITAS, s.r.o. všetky práva vyhradené.</p>
           <p>
             Tvorba stránky –{" "}
-            <a href="https://www.aebdigital.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ed2024] transition-colors">
+            <a href="https://aebdigital.sk" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ed2024] transition-colors">
               AEB Digital
             </a>
           </p>

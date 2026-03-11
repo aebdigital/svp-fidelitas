@@ -41,24 +41,24 @@ export default function PneuservisPage() {
       />
 
       <section className="py-16 bg-white">
-        <div className="mx-auto w-[90vw] px-4">
+        <div className="mx-auto w-[90vw] md:px-4">
           <div className="space-y-20">
             {sections.map((section) => (
               <div key={section.title}>
-                <h2 className="text-[30px] md:text-[38px] font-bold text-black mb-4 font-heading leading-tight">
+                <h2 className="text-[30px] md:text-[38px] font-bold text-black mb-4 font-heading leading-tight max-w-3xl">
                   {section.title}
                 </h2>
 
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
-                  <p className="flex-1 text-[17px] text-[#6a6a6a] leading-relaxed font-heading font-normal">
+                  <p className="flex-1 text-[17px] text-[#6a6a6a] leading-relaxed font-heading font-normal max-w-2xl">
                     {section.description}
                   </p>
                   <Link
                     href="/kontakt"
-                    className="shrink-0 inline-block bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] rounded-[3px] hover:scale-[1.04] transition-transform self-start"
+                    className="shrink-0 inline-block bg-[#ed2024] text-white font-medium text-[18px] px-[33px] py-[16px] hover:scale-[1.04] transition-transform self-start"
                     style={{ fontFamily: "Roboto, sans-serif" }}
                   >
-                    Kontakt
+                    KONTAKT
                   </Link>
                 </div>
 
