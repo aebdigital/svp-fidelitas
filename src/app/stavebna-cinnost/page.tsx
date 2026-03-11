@@ -78,7 +78,7 @@ export default function StavebnaCinnostPage() {
       <PageHero
         title="Stavebná činnosť"
         subtitle="Zakladanie stavieb, kompletné stavebné práce, základové dosky na kľúč"
-        backgroundImage="/images/IMG_6672-scaled-e1744026719484-1024x990.jpg"
+        backgroundImage="/images/IMG_6259.jpg"
         badgeImage="/images/ISO-9001-SK-1_page-0001-724x1024.jpg"
         badgeAlt="ISO 9001 Certifikát"
       />
