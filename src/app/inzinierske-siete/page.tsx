@@ -79,7 +79,7 @@ export default function InzinierskeSietePage() {
     <>
       <PageHero
         title="Inžinierske siete"
-        backgroundImage="/images/IMG_8128-1024x768.jpg"
+        backgroundImage="/images/IMG_6672-scaled-e1744026719484-1024x990.jpg"
       />
 
       <section className="py-16 bg-white">

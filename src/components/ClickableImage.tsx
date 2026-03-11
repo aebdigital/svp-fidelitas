@@ -10,6 +10,7 @@ interface ClickableImageProps {
   className?: string;
   allImages?: { src: string; alt: string }[];
   index?: number;
+  unoptimized?: boolean;
 }
 
 export default function ClickableImage({
@@ -18,6 +19,7 @@ export default function ClickableImage({
   className = "",
   allImages,
   index = 0,
+  unoptimized = false,
 }: ClickableImageProps) {
   const [open, setOpen] = useState(false);
 
@@ -27,7 +29,14 @@ export default function ClickableImage({
   return (
     <>
       <div className={`cursor-pointer group/img ${className}`} onClick={() => setOpen(true)}>
-        <Image src={src} alt={alt} fill className="object-cover transition-transform duration-700 ease-in-out group-hover/img:scale-110" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 90vw, 50vw"
+          unoptimized={unoptimized}
+          className="object-cover transition-transform duration-700 ease-in-out group-hover/img:scale-110"
+        />
       </div>
 
       {open && (

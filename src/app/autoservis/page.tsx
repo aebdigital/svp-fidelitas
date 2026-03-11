@@ -62,6 +62,7 @@ export default function AutoservisPage() {
                   className="flex-1 relative h-[350px] md:h-[450px] w-full overflow-hidden"
                   allImages={allImages}
                   index={idx}
+                  unoptimized
                 />
               </div>
             ))}
