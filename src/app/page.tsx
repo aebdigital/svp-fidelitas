@@ -117,12 +117,10 @@ export default function Home() {
             </div>
             <div className="relative overflow-hidden shadow-lg aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2651.1!2d17.8!3d48.423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b5a673e6fdb01%3A0x9e33844abe8b8be0!2sSV.P.%20FIDELITAS!5e0!3m2!1ssk!2ssk"
-                title="SV.P. FIDELITAS - Mapa"
-                style={{ border: 0 }}
+                src="https://www.youtube.com/embed/itZMTamycnQ"
+                title="SV.P. FIDELITAS"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0 w-full h-full"
               />
             </div>
