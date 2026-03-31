@@ -28,7 +28,7 @@ export default function PageHero({ title, subtitle, backgroundImage, badgeImage,
 
       <div className="relative mx-auto w-[90vw] md:px-4 flex items-center justify-between">
         <div className="w-full lg:max-w-[69%]">
-          <h1 className="text-[40px] md:text-[60px] font-bold text-white leading-[1.2] mb-3 font-heading drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+          <h1 className="hero-title text-[40px] md:text-[60px] text-white leading-[1.2] mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
             {title}
           </h1>
           {subtitle && (

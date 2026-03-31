@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-heading">
+                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light uppercase tracking-[0.08em]">
                     {link.label}
                   </Link>
                 </li>
@@ -69,7 +69,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-heading">
+                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light uppercase tracking-[0.08em]">
                     {link.label}
                   </Link>
                 </li>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={openCookieSettings}
-                  className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-heading text-left"
+                  className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light uppercase tracking-[0.08em] text-left"
                 >
                   Nastavenia cookies
                 </button>

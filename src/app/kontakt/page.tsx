@@ -28,7 +28,7 @@ export default function KontaktPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="text-[38px] font-bold text-black mb-8 font-heading">
+              <h2 className="section-title mb-8">
                 Kontaktné údaje
               </h2>
 

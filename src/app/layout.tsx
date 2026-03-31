@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter_Tight, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 
-const inter = Inter({
+const interTight = Inter_Tight({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  variable: "--font-inter-tight",
   display: "swap",
+  weight: ["300", "700", "900"],
 });
 
-const manrope = Manrope({
+const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-manrope",
+  variable: "--font-poppins",
   display: "swap",
+  weight: ["700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -110,7 +112,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${manrope.variable} font-sans antialiased font-normal`}>
+      <body className={`${interTight.variable} ${poppins.variable} font-sans antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

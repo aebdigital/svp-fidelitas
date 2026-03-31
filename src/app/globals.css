@@ -5,8 +5,8 @@
   --color-primary-dark: #cc1b1f;
   --color-accent: #faee1b;
   --color-dark: #000000;
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
-  --font-heading: var(--font-manrope), var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-inter-tight), Arial, sans-serif;
+  --font-heading: var(--font-poppins), Arial, sans-serif;
 }
 
 html {
@@ -15,8 +15,50 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-weight: 300;
   color: #000000;
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #000000;
+}
+
+.section-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #000000;
+}
+
+.hero-title {
+  font-family: var(--font-sans);
+  font-weight: 900;
+}
+
+p,
+li,
+article,
+label,
+input,
+textarea,
+span {
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+p.font-heading,
+li.font-heading,
+article.font-heading,
+label.font-heading,
+input.font-heading,
+textarea.font-heading,
+span.font-heading {
+  font-family: var(--font-sans);
 }

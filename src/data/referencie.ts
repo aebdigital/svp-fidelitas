@@ -2,6 +2,8 @@ export interface ReferenceProject {
   slug: string;
   title: string;
   description: string;
+  city: string;
+  detailText: string;
   preview: string;
   mainImage: string;
   images: string[];
@@ -15,6 +17,9 @@ export const projects: ReferenceProject[] = [
     title: "Injektáže",
     description:
       "Realizácia injektážnych prác na zabezpečenie hydroizolácie a sanácie konštrukcií. Profesionálne riešenia pre ochranu stavieb pred vlhkosťou.",
+    city: "Hlohovec",
+    detailText:
+      "Súčasťou realizácie bolo posúdenie technického stavu, návrh vhodného technologického postupu a precízne prevedenie sanačných zásahov tak, aby sa predĺžila životnosť konštrukcie a stabilizovali problematické miesta.",
     preview: `${base}/injektaze/IMG_0032.JPG`,
     mainImage: `${base}/injektaze/IMG_3298.JPG`,
     images: [
@@ -35,6 +40,9 @@ export const projects: ReferenceProject[] = [
     title: "Most cez potok",
     description:
       "Výstavba mosta cez potok vrátane kompletných zemných prác, základov a nosnej konštrukcie. Komplexná realizácia od projektu po dokončenie.",
+    city: "Hlohovec",
+    detailText:
+      "Projekt zahŕňal koordináciu zemných prác, zakladania, nosných prvkov aj finálnych detailov tak, aby výsledné riešenie spĺňalo nároky na bezpečnosť, funkčnosť a dlhodobú odolnosť stavby.",
     preview: `${base}/most_cez_potok/IMG_6073.JPG`,
     mainImage: `${base}/most_cez_potok/IMG_7832.JPG`,
     images: [
@@ -55,6 +63,9 @@ export const projects: ReferenceProject[] = [
     title: "Vnútorné zateplenie obvodového plášťa",
     description:
       "Zateplenie obvodového plášťa budov z vnútornej strany. Efektívne riešenie pre zlepšenie tepelnoizolačných vlastností existujúcich objektov.",
+    city: "Hlohovec",
+    detailText:
+      "Pri realizácii sme kládli dôraz na presnosť detailov, výber vhodných materiálov a minimalizáciu zásahov do prevádzky objektu, aby sa dosiahlo výrazné zlepšenie tepelného komfortu a energetickej efektivity.",
     preview: `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7612.JPG`,
     mainImage: `${base}/vnutorne_zateplenie_obvodoveho_plasta/IMG_7723.JPG`,
     images: [
@@ -67,6 +78,9 @@ export const projects: ReferenceProject[] = [
     title: "Vnútroblok parkovisko",
     description:
       "Realizácia vnútroblokového parkoviska vrátane spevnených plôch, odvodnenia a finálnych úprav povrchu.",
+    city: "Hlohovec",
+    detailText:
+      "Výstavba prebiehala s dôrazom na funkčné dopravné riešenie, správne odvodnenie územia a kvalitné povrchové vrstvy, aby výsledok priniesol dlhodobú spoľahlivosť aj komfortné používanie.",
     preview: `${base}/vnutroblok_parkovisko/IMG_0115.JPG`,
     mainImage: `${base}/vnutroblok_parkovisko/IMG_8002.JPG`,
     images: [
@@ -87,6 +101,9 @@ export const projects: ReferenceProject[] = [
     title: "Výstavba prepojovacej komunikácie",
     description:
       "Realizácia výstavby prepojovacej komunikácie vrátane zemných prác, podkladových vrstiev a finálnej úpravy povrchu.",
+    city: "Hlohovec",
+    detailText:
+      "Na projekte sme zabezpečili všetky rozhodujúce etapy od prípravy podložia cez konštrukčné vrstvy až po finálne dokončenie komunikácie, s dôrazom na plynulú nadväznosť a spoľahlivú prevádzku.",
     preview: `${base}/vystavba_prepojovacej_komunikacie/IMG_0215.JPG`,
     mainImage: `${base}/vystavba_prepojovacej_komunikacie/IMG_1674.JPG`,
     images: [
@@ -102,6 +119,9 @@ export const projects: ReferenceProject[] = [
     title: "Výstavba vodovodu",
     description:
       "Kompletná výstavba vodovodného potrubia a infraštruktúry. Pokládka potrubí, napojenie na existujúcu sieť a záverečné skúšky.",
+    city: "Hlohovec",
+    detailText:
+      "Súčasťou zákazky bola koordinácia výkopových prác, pokládky potrubných trás, napojení a kontrolných skúšok, aby sa zabezpečila spoľahlivá a dlhodobo funkčná infraštruktúra.",
     preview: `${base}/vystavba_vodovodu/IMG_3746.jpeg`,
     mainImage: `${base}/vystavba_vodovodu/IMG_3798.jpeg`,
     images: [
@@ -118,6 +138,9 @@ export const projects: ReferenceProject[] = [
     title: "Výstavba bytových domov",
     description:
       "Komplexná výstavba bytových domov od základov po dokončenie. Realizácia hrubej stavby, inštalácií a finálnych úprav.",
+    city: "Hlohovec",
+    detailText:
+      "Projekt zastrešoval komplexné stavebné práce v rôznych etapách realizácie vrátane koordinácie profesií, technických detailov a finálnych úprav s cieľom odovzdať kvalitné a pripravené bývanie.",
     preview: `${base}/vystavby_bytovych_domov/IMG_2692.jpeg`,
     mainImage: `${base}/vystavby_bytovych_domov/IMG_2929.jpeg`,
     images: [

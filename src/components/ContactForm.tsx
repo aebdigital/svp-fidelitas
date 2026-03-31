@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      <h2 className="text-[38px] font-bold text-black mb-8 font-heading">
+      <h2 className="section-title mb-8">
         Napíšte nám
       </h2>
 

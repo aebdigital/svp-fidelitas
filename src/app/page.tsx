@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { projects } from "@/data/referencie";
+import ReferenceCard from "@/components/ReferenceCard";
 
 const heroImages = [
   "/images/hero-1.jpg",
@@ -66,7 +68,7 @@ export default function Home() {
 
         <div className="relative mx-auto w-[90vw] md:px-4">
           <div className="w-full lg:max-w-[69%]">
-            <h1 className="text-[44px] md:text-[72px] font-extrabold text-white leading-[1.1] mb-4 font-heading drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+            <h1 className="hero-title text-[44px] md:text-[72px] text-white leading-[1.1] mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Všetko pod jednou strechou
             </h1>
             <p className="text-[17px] md:text-[20px] text-white font-normal leading-relaxed mb-10 font-heading">
@@ -90,7 +92,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-[20px] text-[#f44e19] font-bold mb-2 font-heading">SVP.FIDELITAS</p>
-              <h2 className="text-[38px] font-bold text-black mb-6 font-heading leading-tight">
+              <h2 className="section-title mb-6">
                 SV.P.FIDELITAS, s.r.o.
               </h2>
               <p className="text-[17px] text-[#6a6a6a] leading-relaxed mb-8 font-heading font-normal">
@@ -131,8 +133,8 @@ export default function Home() {
       {/* Services Section */}
       <section id="sluzby" className="py-16 bg-white">
         <div className="mx-auto w-[90vw] md:px-4">
-          <h2 className="text-[38px] font-bold text-black mb-10 font-heading text-center">
-            S čím Vám vieme pomôcť?
+          <h2 className="section-title mb-10 text-center">
+            Naše služby
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -179,6 +181,28 @@ export default function Home() {
                   <ArrowUpRight className="absolute top-4 right-4 h-6 w-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#faf8f4] py-20">
+        <div className="mx-auto w-[90vw] md:px-4">
+          <div className="mb-12 text-center">
+            <h2 className="section-title text-center">
+              Vybrané projekty
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {projects.slice(0, 6).map((project) => (
+              <ReferenceCard
+                key={project.slug}
+                href={`/referencie/${project.slug}`}
+                title={project.title}
+                city={project.city}
+                image={project.preview}
+              />
             ))}
           </div>
         </div>
