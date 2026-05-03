@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/autoservis", label: "Autoservis" },
   { href: "/pneuservis", label: "Pneuservis" },
   { href: "/referencie", label: "Referencie" },
+  { href: "/certifikaty", label: "Certifikáty" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 

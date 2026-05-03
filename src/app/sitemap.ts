@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/autoservis",
     "/pneuservis",
     "/referencie",
+    "/certifikaty",
     "/kontakt",
     "/obchodne-podmienky",
     "/cookies",

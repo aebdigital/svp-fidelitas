@@ -8,7 +8,8 @@ const services = [
   { href: "/inzinierske-siete", label: "Inžinierske siete" },
   { href: "/stavebna-cinnost", label: "Stavebná činnosť" },
   { href: "/autoservis", label: "Autoservis" },
-  { href: "/pneuservis", label: "Pneuservis" },
+  { href: "/referencie", label: "Referencie" },
+  { href: "/certifikaty", label: "Certifikáty" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
