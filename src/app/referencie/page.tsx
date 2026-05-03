@@ -27,6 +27,7 @@ export default function ReferenciePage() {
                 title={project.title}
                 city={project.city}
                 image={project.preview}
+                objectPosition={project.previewPosition}
               />
             ))}
           </div>

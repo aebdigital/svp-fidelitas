@@ -5,6 +5,7 @@ export interface ReferenceProject {
   city: string;
   detailText: string;
   preview: string;
+  previewPosition?: string;
   mainImage: string;
   images: string[];
 }
@@ -20,7 +21,7 @@ export const projects: ReferenceProject[] = [
     city: "Hlohovec",
     detailText:
       "Súčasťou realizácie bolo posúdenie technického stavu, návrh vhodného technologického postupu a precízne prevedenie sanačných zásahov tak, aby sa predĺžila životnosť konštrukcie a stabilizovali problematické miesta.",
-    preview: `${base}/injektaze/IMG_0032.JPG`,
+    preview: `${base}/injektaze/IMG_3300.JPG`,
     mainImage: `${base}/injektaze/IMG_3298.JPG`,
     images: [
       `${base}/injektaze/IMG_0032.JPG`,
@@ -43,7 +44,8 @@ export const projects: ReferenceProject[] = [
     city: "Hlohovec",
     detailText:
       "Projekt zahŕňal koordináciu zemných prác, zakladania, nosných prvkov aj finálnych detailov tak, aby výsledné riešenie spĺňalo nároky na bezpečnosť, funkčnosť a dlhodobú odolnosť stavby.",
-    preview: `${base}/most_cez_potok/IMG_6073.JPG`,
+    preview: `${base}/most_cez_potok/IMG_7832.JPG`,
+    previewPosition: "bottom",
     mainImage: `${base}/most_cez_potok/IMG_7832.JPG`,
     images: [
       `${base}/most_cez_potok/IMG_6073.JPG`,
@@ -104,7 +106,7 @@ export const projects: ReferenceProject[] = [
     city: "Hlohovec",
     detailText:
       "Na projekte sme zabezpečili všetky rozhodujúce etapy od prípravy podložia cez konštrukčné vrstvy až po finálne dokončenie komunikácie, s dôrazom na plynulú nadväznosť a spoľahlivú prevádzku.",
-    preview: `${base}/vystavba_prepojovacej_komunikacie/IMG_0215.JPG`,
+    preview: `${base}/vystavba_prepojovacej_komunikacie/IMG_1878.JPG`,
     mainImage: `${base}/vystavba_prepojovacej_komunikacie/IMG_1674.JPG`,
     images: [
       `${base}/vystavba_prepojovacej_komunikacie/IMG_0215.JPG`,
@@ -122,7 +124,7 @@ export const projects: ReferenceProject[] = [
     city: "Hlohovec",
     detailText:
       "Súčasťou zákazky bola koordinácia výkopových prác, pokládky potrubných trás, napojení a kontrolných skúšok, aby sa zabezpečila spoľahlivá a dlhodobo funkčná infraštruktúra.",
-    preview: `${base}/vystavba_vodovodu/IMG_3746.jpeg`,
+    preview: `${base}/vystavba_vodovodu/IMG_5703.JPG`,
     mainImage: `${base}/vystavba_vodovodu/IMG_3798.jpeg`,
     images: [
       `${base}/vystavba_vodovodu/IMG_3746.jpeg`,
@@ -141,7 +143,7 @@ export const projects: ReferenceProject[] = [
     city: "Hlohovec",
     detailText:
       "Projekt zastrešoval komplexné stavebné práce v rôznych etapách realizácie vrátane koordinácie profesií, technických detailov a finálnych úprav s cieľom odovzdať kvalitné a pripravené bývanie.",
-    preview: `${base}/vystavby_bytovych_domov/IMG_2692.jpeg`,
+    preview: `${base}/vystavby_bytovych_domov/PHOTO-2026-02-23-09-48-20.jpg`,
     mainImage: `${base}/vystavby_bytovych_domov/IMG_2929.jpeg`,
     images: [
       `${base}/vystavby_bytovych_domov/IMG_0116.JPG`,

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ServiceSidebarTabs, { ServiceSidebarSection } from "@/components/ServiceSidebarTabs";
+import CertificatesGallery from "@/components/CertificatesGallery";
 
 export const metadata: Metadata = {
   title: "Stavebná činnosť | SV.P. FIDELITAS",
@@ -78,13 +79,23 @@ export default function StavebnaCinnostPage() {
         title="Stavebná činnosť"
         subtitle="Zakladanie stavieb, kompletné stavebné práce, základové dosky na kľúč"
         backgroundImage="/images/IMG_6259.jpg"
-        badgeImage="/images/ISO-9001-SK-1_page-0001-724x1024.jpg"
-        badgeAlt="ISO 9001 Certifikát"
       />
 
       <section className="py-16 bg-white">
         <div className="mx-auto w-[90vw] md:px-4">
           <ServiceSidebarTabs sections={sections} />
+        </div>
+      </section>
+
+      {/* Certificates Section */}
+      <section className="py-20 bg-[#faf8f4]">
+        <div className="mx-auto w-[90vw] md:px-4">
+          <div className="text-center mb-12">
+            <p className="text-[18px] text-[#ed2024] font-bold mb-2 font-heading tracking-wide">Kvalita overená certifikátmi</p>
+            <h2 className="section-title">Naše certifikáty</h2>
+          </div>
+
+          <CertificatesGallery />
         </div>
       </section>
     </>

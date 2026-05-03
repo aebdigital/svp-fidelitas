@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light uppercase tracking-[0.08em]">
+                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light tracking-[0.02em]">
                     {link.label}
                   </Link>
                 </li>
@@ -69,7 +69,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light uppercase tracking-[0.08em]">
+                  <Link href={link.href} className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light tracking-[0.02em]">
                     {link.label}
                   </Link>
                 </li>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={openCookieSettings}
-                  className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light uppercase tracking-[0.08em] text-left"
+                  className="text-[17px] text-white/80 hover:text-[#ed2024] transition-colors font-light tracking-[0.02em] text-left"
                 >
                   Nastavenia cookies
                 </button>
@@ -88,7 +88,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-[22px] font-bold text-white mb-5 font-heading">Adresa a Kontakt</h3>
-            <div className="space-y-3 text-[17px] text-white/80 font-heading">
+            <div className="space-y-3 text-[17px] text-white/80 font-light tracking-[0.02em]">
               <p>Šoltésova 17, 920 01 Hlohovec</p>
               <a href="mailto:svp.fidelitas@hlohovec.net" className="block hover:text-[#ed2024] transition-colors">
                 svp.fidelitas@hlohovec.net
@@ -99,7 +99,7 @@ export default function Footer() {
                     <span className="text-white/50 text-sm block">{contact.label}</span>
                     <a
                       href={`tel:+421${contact.phone.replace(/\s/g, "").slice(1)}`}
-                      className="text-white hover:text-[#ed2024] transition-colors font-bold"
+                      className="text-white/80 hover:text-[#ed2024] transition-colors font-light tracking-[0.02em] text-[17px]"
                     >
                       {contact.phone}
                     </a>
@@ -110,8 +110,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-[#313338] flex flex-col md:flex-row justify-between items-center gap-3 text-[16px] text-[#b3b3b3] font-heading">
-          <p>2025© SV.P.FIDELITAS, s.r.o. všetky práva vyhradené.</p>
+        <div className="pt-6 border-t border-[#313338] flex flex-col md:flex-row justify-between items-center gap-3 text-[15px] text-white/80 font-light tracking-[0.02em]">
+          <p>2026© SV.P.FIDELITAS, s.r.o. všetky práva vyhradené.</p>
           <p>
             Tvorba stránky –{" "}
             <a href="https://aebdigital.sk" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#ed2024] transition-colors">

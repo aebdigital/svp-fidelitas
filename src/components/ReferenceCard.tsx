@@ -9,9 +9,10 @@ interface ReferenceCardProps {
   title: string;
   city: string;
   image: string;
+  objectPosition?: string;
 }
 
-export default function ReferenceCard({ href, title, city, image }: ReferenceCardProps) {
+export default function ReferenceCard({ href, title, image, objectPosition }: ReferenceCardProps) {
   return (
     <Link
       href={href}
@@ -23,21 +24,18 @@ export default function ReferenceCard({ href, title, city, image }: ReferenceCar
           alt={title}
           fill
           className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+          sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 30vw"
+          style={objectPosition ? { objectPosition } : undefined}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/35" />
 
-        <div className="absolute inset-0 flex flex-col justify-between p-6">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="max-w-[78%] text-[22px] leading-[1.2] text-white">
-              {title}
-            </h3>
-            <ArrowUpRight className="mt-1 h-7 w-7 shrink-0 text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </div>
-
-          <p className="text-[17px] text-white/88">
-            {city}
-          </p>
+        <div className="absolute inset-0 flex flex-col justify-end p-6">
+          <h3 className="text-[22px] leading-[1.2] text-white">
+            {title}
+          </h3>
         </div>
+
+        <ArrowUpRight className="absolute top-4 right-4 h-7 w-7 shrink-0 text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </div>
     </Link>
   );

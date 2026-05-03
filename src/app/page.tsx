@@ -3,14 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Shield, Award, Clock, Users } from "lucide-react";
 import { projects } from "@/data/referencie";
 import ReferenceCard from "@/components/ReferenceCard";
 
 const heroImages = [
-  "/images/hero-1.jpg",
-  "/images/hero-2.jpg",
-  "/images/hero-3.jpg",
+  "/stavebna_cinnost_referencie/vnutorne_zateplenie_obvodoveho_plasta/IMG_7612.JPG",
+  "/images/IMG_6259.jpg",
+  "/images/doprava-betonove-zmesi.jpg",
 ];
 
 const serviceCards = [
@@ -19,6 +19,28 @@ const serviceCards = [
   { title: "Stavebná činnosť", img: "/images/IMG_6397-1-1024x768.jpg", href: "/stavebna-cinnost" },
   { title: "Autoservis", img: "/images/8FA0BF52-AD38-4943-ACCB-4151221E60B1_1_102_o-1024x768.jpeg", href: "/autoservis" },
   { title: "Pneuservis", img: "/images/oprava8.jpg", href: "/pneuservis" },
+];
+
+const values = [
+  {
+    icon: Shield,
+    number: "27+",
+    label: "Rokov skúseností",
+    desc: "Na trhu pôsobíme od roku 1998",
+  },
+  {
+    icon: Users,
+    number: "500+",
+    label: "Spokojných klientov",
+    desc: "Dôvera partnerov a zákazníkov",
+  },
+  {
+    icon: Award,
+    number: "5",
+    label: "Odborov služieb",
+    desc: "Komplexné riešenia pod jednou strechou",
+  },
+
 ];
 
 export default function Home() {
@@ -61,6 +83,7 @@ export default function Home() {
                 i === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
               priority={i === 0}
+              sizes="100vw"
             />
           ))}
         </div>
@@ -130,6 +153,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Values Section */}
+      <section className="py-20 bg-[#111111]">
+        <div className="mx-auto w-[90vw] md:px-4">
+          <div className="text-center mb-14">
+            <p className="text-[18px] text-[#ed2024] font-bold mb-2 font-heading tracking-wide">Prečo práve my</p>
+            <h2 className="section-title !text-white">
+              Naše hodnoty v číslach
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {values.map((item) => (
+              <div
+                key={item.label}
+                className="group relative bg-white/[0.04] border border-white/[0.08] p-8 text-center hover:bg-white/[0.08] transition-all duration-500"
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-[#ed2024]/10 mb-5 rounded-sm">
+                  <item.icon className="h-7 w-7 text-[#ed2024]" />
+                </div>
+                <p className="text-[42px] font-bold text-white leading-none mb-2" style={{ fontFamily: "var(--font-sans)" }}>
+                  {item.number}
+                </p>
+                <p className="text-[18px] text-white font-bold mb-1 font-heading">
+                  {item.label}
+                </p>
+                <p className="text-[15px] text-white/50 font-heading font-normal">
+                  {item.desc}
+                </p>
+                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#ed2024] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="sluzby" className="py-16 bg-white">
         <div className="mx-auto w-[90vw] md:px-4">
@@ -150,6 +208,7 @@ export default function Home() {
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <h3 className="absolute bottom-[5%] left-[5%] text-white font-bold text-[20px] font-heading">
@@ -173,6 +232,7 @@ export default function Home() {
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <h3 className="absolute bottom-[5%] left-[5%] text-white font-bold text-[20px] font-heading">
@@ -202,6 +262,7 @@ export default function Home() {
                 title={project.title}
                 city={project.city}
                 image={project.preview}
+                objectPosition={project.previewPosition}
               />
             ))}
           </div>

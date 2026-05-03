@@ -87,7 +87,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative px-4 py-3 text-[16px] font-bold font-heading transition-colors group drop-shadow-sm uppercase tracking-wide ${isActive ? "text-[#ed2024]" : "text-white"}`}
+                    className={`relative px-4 py-3 text-[16px] font-bold font-heading transition-colors group drop-shadow-sm uppercase tracking-wide text-white`}
                   >
                     {link.label}
                     <span className={`absolute bottom-0 left-0 right-0 h-[3px] bg-[#ed2024] transition-transform origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />

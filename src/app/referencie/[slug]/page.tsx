@@ -46,9 +46,7 @@ export default async function ReferencieDetailPage({ params }: Props) {
 
           <div className="mt-8 grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
             <div className="max-w-[680px]">
-              <p className="mb-3 text-[15px] uppercase tracking-[0.16em] text-[#ed2024]">
-                {project.city}
-              </p>
+
               <h1 className="hero-title mb-6 text-[40px] leading-[1.05] text-black md:text-[62px]">
                 {project.title}
               </h1>
